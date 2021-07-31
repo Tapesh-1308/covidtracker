@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto+Mono&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: #2d3436;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+  
+::-webkit-scrollbar-track {
+    background: #2d3436;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 30px;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+section{
+    width: 100vw;
+    padding: 2.4rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1{
+    font-size: 2rem;
+    animation: live 0.5s infinite alternate-reverse;
+}
+@keyframes live {
+    100%{
+        color: #2d3436;
+    }
+}
+
+h2{
+    color: gold;
+    font-size: 4rem;
+    margin: 3rem;
+}
+
+ul{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 5rem;
+    place-items: center;
+}
+.card{
+    width: 35rem;
+    height: 20rem;
+    list-style: none;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+    box-shadow: rgba(200, 200, 200, 0.25) 0px 3px 15px;
+    transition: transform 0.2s ease;
+}
+.card:nth-child(1){
+    background: -webkit-linear-gradient(to bottom right, #E67E22 51%, #4CD137 0%);
+    background: -moz-linear-gradient(to bottom right, #E67E22 51%, #4CD137 0%);
+    background: linear-gradient(to bottom right, #E67E22 51%, #4CD137 0%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.card:nth-child(2){
+   background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+}
+.card:nth-child(3){
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+
+}
+.card:nth-child(4){
+    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+}
+.card:nth-child(5){
+    background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+    
+}
+.card:nth-child(6){
+    background-image: linear-gradient(to top, #7028e4 0%, #e5b2ca 100%);
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.cardName{
+    font-size: 2.5rem;
+    font-family: 'Roboto Mono', monospace;
+}
+
+span{
+    font-size: 1.5rem;
+}
+.cardTotal{
+    font-family: 'Righteous', cursive;
+    font-size: 6rem;
+    text-shadow: 7px 3px 3px rgba(0,0,0,0.3);
+    margin-top: 15px;
+}
+
+.cardLarge{
+    font-size: 10rem;
+    margin: 0;
+}
+
+.cardSmall{
+    font-size: 5rem;
+}
+
+.container-fluid{
+    width: 80%;
+    margin: auto;
+    margin-top: 7rem;
+    margin-bottom: 2rem;
+}
+.dashboard{
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 5rem;
+    padding: 12px;
+    border-bottom: 0.5px solid grey;
+}
+
+.dashboard span{
+    font-size: 5rem;
+    background: -webkit-linear-gradient(to bottom right, #E67E22 51%, #4CD137 0%);
+    background: -moz-linear-gradient(to bottom right, #E67E22 51%, #4CD137 0%);
+    background: linear-gradient(to bottom right, #E67E22 51%, #4CD137 0%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.table-responsive{
+    max-height: 70rem;
+    box-shadow: rgba(255,255,255,0.25) 0px 25px 50px -12px;
+    overflow-y: scroll;
+    font-size: 2rem;
+    border: 0.5px solid grey;
+}
+
+tr:hover{
+    background-color: rgb(17, 17, 5);
+}
+
+
+td,th{
+    position: relative;
+}
+
+th{
+    border-bottom: 0.5px solid grey;
+    background-color: rgb(17, 17, 5);
+}
+
+.table td, .table th{
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: none;
+}
+
+td:hover::after, th:hover::after{
+    content: "";
+    position: absolute;
+    background-color: #181717;
+    left: 0;
+    top: -5000px;
+    height: 5000px;
+    width: 100%;
+    z-index: -1;
+}
+
+.table tr td:hover:nth-child(4){
+    background-color: rgba(231, 83, 115);
+    color: rgb(240, 248, 255);
+    border: 0.5px solid rgb(12, 12, 12);
+}
+
+.table tr td:hover{
+    background-color: rgba(117, 223, 122);
+    color: rgb(240, 248, 255);
+    border: 0.5px solid rgb(12, 12, 12);
+}
+.thead-dark{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+@media (max-width: 1085px) {
+    ul{
+        grid-template-columns: 6fr 6fr;
+    }
+}
+@media (max-width: 770px) {
+    ul{
+        grid-template-columns: 6fr;
+    }
+}
